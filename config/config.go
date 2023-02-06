@@ -16,12 +16,12 @@ type Config struct {
 func InitConfiguration() Config {
 
 	return Config{
-		SERVER_ADDRESS: GetOrDefault("SERVER_ADDRESS", "0.0.0.0:1323"),
+		SERVER_ADDRESS: GetOrDefault("SERVER_ADDRESS", "mysql://root:T3Csk2IF3bW4R44EsFhM@containers-us-west-129.railway.app:7938/railway"),
 		DB_USERNAME:    GetOrDefault("DB_USERNAME", "root"),
-		DB_PASSWORD:    GetOrDefault("DB_PASSWORD", "anakbaru"),
-		DB_NAME:        GetOrDefault("DB_NAME", "ap_pkl"),
-		DB_PORT:        GetOrDefault("DB_PORT", "3306"),
-		DB_HOST:        GetOrDefault("DB_HOST", "127.0.0.1"),
+		DB_PASSWORD:    GetOrDefault("DB_PASSWORD", "T3Csk2IF3bW4R44EsFhM"),
+		DB_NAME:        GetOrDefault("DB_NAME", "railway"),
+		DB_PORT:        GetOrDefault("DB_PORT", "7938"),
+		DB_HOST:        GetOrDefault("DB_HOST", "containers-us-west-129.railway.app"),
 		JWT_KEY:        GetOrDefault("JWT_KEY", "sungguhRahasia"),
 		LOC:            GetOrDefault("LOC", "Asia%2FJakarta"),
 	}
