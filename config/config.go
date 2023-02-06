@@ -16,7 +16,7 @@ type Config struct {
 func InitConfiguration() Config {
 
 	return Config{
-		SERVER_ADDRESS: GetOrDefault("SERVER_ADDRESS", "mysql://root:T3Csk2IF3bW4R44EsFhM@containers-us-west-129.railway.app:7938/railway"),
+		SERVER_ADDRESS: GetOrDefault("SERVER_ADDRESS", "mysql://${{ MYSQLUSER }}:${{ MYSQLPASSWORD }}@${{ MYSQLHOST }}:${{ MYSQLPORT }}/${{ MYSQLDATABASE }}"),
 		DB_USERNAME:    GetOrDefault("DB_USERNAME", "root"),
 		DB_PASSWORD:    GetOrDefault("DB_PASSWORD", "T3Csk2IF3bW4R44EsFhM"),
 		DB_NAME:        GetOrDefault("DB_NAME", "railway"),
