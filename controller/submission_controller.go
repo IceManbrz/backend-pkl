@@ -461,12 +461,12 @@ func (ce *EchoController) ExportSubmissionToExcelController(c echo.Context) erro
 		file.SetCellValue("Sheet1", fmt.Sprintf("P%d", i+2), submissions[i].CreatedAt)
 	}
 
-	err = file.SaveAs("../uploads/export.xlsx")
+	err = file.SaveAs("uploads/export.xlsx")
 	if err != nil {
 		return c.JSON(500, map[string]interface{}{
 			"messages": "error save file",
 		})
 	}
 
-	return c.Attachment("../uploads/export.xlsx", "export.xlsx")
+	return c.Attachment("uploads/export.xlsx", "export.xlsx")
 }
